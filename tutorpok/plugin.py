@@ -17,6 +17,9 @@ hooks.Filters.CONFIG_DEFAULTS.add_items(
         # Each new setting is a pair: (setting_name, default_value).
         # Prefix your setting names with 'POK_'.
         ("POK_VERSION", __version__),
+        ("POK_PLUGIN_VERSION", "v20250429"),
+        ("POK_API_KEY", ""),
+        ("POK_TEMPLATE_ID", ""),
     ]
 )
 
