@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Version management with bump2version
 - CHANGELOG.md for tracking changes
 
+### Changed
+- Updated Tutor dependency to version 19.x
+
 ## [18.0.0] - 2025-07-09
 
 ### Added
