@@ -31,8 +31,7 @@ dependencies = [
 ]
 optional-dependencies = { dev = ["tutor[dev]>=18.0.0,<20.0.0"] }
 
-# These fields will be set by hatch_build.py
-dynamic = ["version"]
+version = "18.0.0"
 
 # https://packaging.python.org/en/latest/specifications/well-known-project-urls/#well-known-labels
 [project.urls]
@@ -41,12 +40,8 @@ Issues = "https://github.com/aulasneo/tutor-contrib-pok/issues"
 Source = "https://github.com/aulasneo/tutor-contrib-pok"
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-# hatch-specific configuration
-[tool.hatch.metadata.hooks.custom]
-path = ".hatch_build.py"
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
 
 [tool.hatch.build.targets.wheel]
 packages = ["tutorpok"]
