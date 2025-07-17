@@ -31,6 +31,47 @@ Usage
 
     tutor plugins enable pok
 
+After enabling the plugin, you must activate POK certificates by enabling the ``module_pok.enable`` waffle flag. By default, POK certificates are disabled until this flag is turned on. You can also set course or organization-specific overrides in the waffle flags configuration for more granular control.
+
+Configuration
+*************
+
+The following settings can be configured in your Tutor environment:
+
+- ``POK_API_KEY``: (Required) The API key for authenticating with the POK service. This key is used to validate requests between your Open edX instance and POK.
+  
+- ``POK_TEMPLATE_ID``: (Optional) The default template ID to use for certificates when no course-specific template is specified. If not set, you'll need to configure templates for each course individually.
+
+Example configuration in ``config.yml``:
+
+.. code-block:: yaml
+
+    POK_API_KEY: "your-api-key-here"
+    POK_TEMPLATE_ID: "default-template-id"  # Optional
+
+Django Admin Configuration
+*************************
+
+After installation, two new sections will be available in the Django admin interface under "POK":
+
+1. **Certificate Templates**
+   - Map POK templates to specific courses
+   - Fields:
+     - **Course**: Select the course for this template
+     - **Template ID**: The POK template ID to use
+     - **Emission Type** (Optional): 
+       - 'POK' for standard PDF certificates (default)
+       - 'Blockchain' for NFT certificates
+     - **Page ID** (Optional): Custom page ID if defined in your POK site
+
+2. **POK Certificates**
+   - View and manage issued POK certificates
+
+To access these settings:
+1. Log in to the Django admin interface
+2. Navigate to the "POK" section
+3. Click on "Certificate templates" to manage course-specific templates
+4. Click on "POK certificates" to view issued certificates
 
 Version Management
 ******************
@@ -48,13 +89,3 @@ To bump the version:
 - For bug fixes (0.0.x): ``bump2version patch``
 - For new features (0.x.0): ``bump2version minor``
 - For breaking changes (x.0.0): ``bump2version major``
-
-Changelog
-*********
-
-See `CHANGELOG.md <CHANGELOG.md>`_ for a history of changes to this project.
-
-License
-*******
-
-This software is licensed under the terms of the AGPLv3.

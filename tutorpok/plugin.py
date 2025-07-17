@@ -48,21 +48,10 @@ hooks.Filters.CONFIG_OVERRIDES.add_items(
 # INITIALIZATION TASKS
 ########################################
 
-# To add a custom initialization task, create a bash script template under:
-# tutorpok/templates/pok/tasks/
-# and then add it to the MY_INIT_TASKS list. Each task is in the format:
-# ("<service>", ("<path>", "<to>", "<script>", "<template>"))
 MY_INIT_TASKS: list[tuple[str, tuple[str, ...]]] = [
-    # For example, to add LMS initialization steps, you could add the script template at:
-    # tutorpok/templates/pok/tasks/lms/init.sh
-    # And then add the line:
-    ### ("lms", ("pok", "tasks", "lms", "init.sh")),
+    ("lms", ("pok", "tasks", "lms", "init.sh")),
 ]
 
-
-# For each task added to MY_INIT_TASKS, we load the task template
-# and add it to the CLI_DO_INIT_TASKS filter, which tells Tutor to
-# run it as part of the `init` job.
 for service, template_path in MY_INIT_TASKS:
     full_path: str = str(
         importlib_resources.files("tutorpok")
