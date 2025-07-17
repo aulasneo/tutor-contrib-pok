@@ -9,13 +9,16 @@ About POK
 `POK <https://pok.tech>`_ revolutionizes credential management with powerful analytics and branding capabilities.
 
 **Smart Credentials**
-  Track the real impact of your credentials with real-time metrics. See how many are viewed, shared on LinkedIn, or downloaded. Understand how they create career opportunities and improve your strategy based on concrete data.
+
+Track the real impact of your credentials with real-time metrics. See how many are viewed, shared on LinkedIn, or downloaded. Understand how they create career opportunities and improve your strategy based on concrete data.
 
 **Brand Customization**
-  Customize every aspect of your credential experience - from pages to emails - with your logo, colors, and messages. Support for AI-powered automatic translations ensures a consistent brand experience globally.
+
+Customize every aspect of your credential experience - from pages to emails - with your logo, colors, and messages. Support for AI-powered automatic translations ensures a consistent brand experience globally.
 
 **Actionable Insights**
-  Capture leads from your branded pages, access valuable insights on credential interactions, and download reports with one click. Our learning paths and analytics dashboards help improve user retention and drive growth.
+
+Capture leads from your branded pages, access valuable insights on credential interactions, and download reports with one click. Our learning paths and analytics dashboards help improve user retention and drive growth.
 
 Installation
 ************
@@ -39,7 +42,6 @@ Configuration
 The following settings can be configured in your Tutor environment:
 
 - ``POK_API_KEY``: (Required) The API key for authenticating with the POK service. This key is used to validate requests between your Open edX instance and POK.
-  
 - ``POK_TEMPLATE_ID``: (Optional) The default template ID to use for certificates when no course-specific template is specified. If not set, you'll need to configure templates for each course individually.
 
 Example configuration in ``config.yml``:
@@ -50,24 +52,30 @@ Example configuration in ``config.yml``:
     POK_TEMPLATE_ID: "default-template-id"  # Optional
 
 Django Admin Configuration
-*************************
+**************************
 
 After installation, two new sections will be available in the Django admin interface under "POK":
 
 1. **Certificate Templates**
+
    - Map POK templates to specific courses
    - Fields:
+
      - **Course**: Select the course for this template
      - **Template ID**: The POK template ID to use
-     - **Emission Type** (Optional): 
+     - **Emission Type** (Optional):
+
        - 'POK' for standard PDF certificates (default)
        - 'Blockchain' for NFT certificates
+
      - **Page ID** (Optional): Custom page ID if defined in your POK site
 
 2. **POK Certificates**
+
    - View and manage issued POK certificates
 
 To access these settings:
+
 1. Log in to the Django admin interface
 2. Navigate to the "POK" section
 3. Click on "Certificate templates" to manage course-specific templates
