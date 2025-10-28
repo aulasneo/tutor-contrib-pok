@@ -34,7 +34,12 @@ Usage
 
     tutor plugins enable pok
 
-After enabling the plugin, you must activate POK certificates by enabling the ``module_pok.enable`` waffle flag. By default, POK certificates are disabled until this flag is turned on. You can also set course or organization-specific overrides in the waffle flags configuration for more granular control.
+After enabling the plugin, enable POK globally by creating and enabling the ``module_pok.enable`` waffle flag in the LMS:
+
+- In the LMS Django Admin: Waffle -> Flags
+- Create a flag named ``module_pok.enable`` and set it to "Active" (global ON)
+
+By default, POK certificates are disabled until this flag is turned on. You can also set course or organization-specific overrides in the waffle flags configuration for more granular control.
 
 Configuration
 *************
