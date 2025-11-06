@@ -10,8 +10,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Bumped `POK_PLUGIN_VERSION` default to `v1.0.1`, implementing language resolution changes.
 
-## [1.0.1] - 2025-11-05
-
 ## [19.0.2] - 2025-10-28
 
 ### Changed
