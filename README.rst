@@ -3,6 +3,8 @@ pok plugin for `Tutor <https://docs.tutor.edly.io>`__
 
 Tutor plugin to integrate POK certificates into Open edX
 
+This release targets Open edX Teak with Tutor 20.x.
+
 About POK
 *********
 

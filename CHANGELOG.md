@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+- Upgraded Tutor compatibility to version 20.x for Open edX Teak.
+- Scoped the LMS init task to the LMS app context and lowered its priority so it runs after core LMS initialization.
+
 ## [19.1.2] - 2025-12-05
 
 * Do not allow multiple templates for the same course.
