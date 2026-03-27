@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- Added branding-aligned local maintenance tooling with a `Makefile`, dev requirements files, and modern build/test targets.
+- Added GitHub Actions `test.yml` and `publish.yml` workflows for test and release automation.
+
+### Changed
+- Updated packaging metadata to require Python 3.11+ only and aligned the project with current build tooling expectations.
+- Ignored generated Tutor local artifacts such as `config.yml` and `env/`.
+
 ## [20.0.0] - 2026-03-17
 
 ### Changed
