@@ -3,7 +3,7 @@ pok plugin for `Tutor <https://docs.tutor.edly.io>`__
 
 Tutor plugin to integrate POK certificates into Open edX
 
-This release targets Open edX Teak with Tutor 20.x.
+This release targets Open edX Ulmo with Tutor 21.x.
 
 About POK
 *********
@@ -48,6 +48,7 @@ Configuration
 
 The following settings can be configured in your Tutor environment:
 
+- ``POK_PLUGIN_PIP_REQUIREMENT``: (Optional) Pip requirement used to install the Open edX package inside the image build. Defaults to ``git+https://github.com/aulasneo/openedx-pok.git@fa4eada56ef5550a3d71e14f6d257b9eab95e498`` until the Ulmo-compatible release is published on PyPI.
 - ``POK_API_KEY``: (Required) The API key for authenticating with the POK service. This key is used to validate requests between your Open edX instance and POK.
 - ``POK_TEMPLATE_ID``: (Optional) The default template ID to use for certificates when no course-specific template is specified. If not set, you'll need to configure templates for each course individually.
 
@@ -55,6 +56,7 @@ Example configuration in ``config.yml``:
 
 .. code-block:: yaml
 
+    POK_PLUGIN_PIP_REQUIREMENT: "git+https://github.com/aulasneo/openedx-pok.git@fa4eada56ef5550a3d71e14f6d257b9eab95e498"
     POK_API_KEY: "your-api-key-here"
     POK_TEMPLATE_ID: "default-template-id"  # Optional
 

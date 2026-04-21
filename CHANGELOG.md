@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated packaging metadata to require Python 3.11+ only and aligned the project with current build tooling expectations.
 - Ignored generated Tutor local artifacts such as `config.yml` and `env/`.
+- Upgraded Tutor compatibility to version 21.x for Open edX Ulmo.
+- Replaced the temporary `openedx-pok` PyPI pin with a configurable Git-based pip requirement defaulting to commit `fa4eada56ef5550a3d71e14f6d257b9eab95e498` until an Ulmo-compatible release is published.
 
 ## [20.0.0] - 2026-03-17
 
