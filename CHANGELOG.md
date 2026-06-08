@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [21.0.1] - 2026-06-08
 
 - Bump backend version to v21.0.1
 - Move development dependencies from requirements files to pyproject metadata.
