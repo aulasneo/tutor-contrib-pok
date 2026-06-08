@@ -1,21 +1,19 @@
 .DEFAULT_GOAL := help
-.PHONY: docs
+.PHONY: build clean dist format help isort requirements test test-dist test-format test-lint test-tutor test-types upgrade
 
 PYTHON ?= python3
 TUTOR ?= $(if $(VIRTUAL_ENV),$(VIRTUAL_ENV)/bin/tutor,tutor)
-TUTOR_CMD = $(TUTOR) -r $(CURDIR)
 SRC_DIRS = ./tutorpok
 BLACK_OPTS = --exclude templates ${SRC_DIRS}
 
 clean: ## Remove build artifacts
 	rm -rf build dist *.egg-info
 
-upgrade: ## Compile requirements from requirements.in
-	pip-compile
+upgrade: ## Upgrade project and development dependencies
+	$(PYTHON) -m pip install --upgrade -e ".[dev]"
 
-requirements: ## Install requirements from requirements.txt
-	$(PYTHON) -m pip install --upgrade -r requirements.txt
-	$(PYTHON) -m pip install -e .
+requirements: ## Install project and development dependencies
+	$(PYTHON) -m pip install -e ".[dev]"
 
 build: clean ## Build the package
 	$(PYTHON) -m build
@@ -39,9 +37,11 @@ test-dist: build ## Check the distribution files
 	twine check dist/*
 
 test-tutor:
-	rm -rf config.yml env/
-	$(TUTOR_CMD) config save
-	$(TUTOR_CMD) plugins enable pok
+	@set -e; \
+	tmpdir="$$(mktemp -d)"; \
+	trap 'rm -rf "$$tmpdir"' EXIT; \
+	$(TUTOR) -r "$$tmpdir" config save; \
+	$(TUTOR) -r "$$tmpdir" plugins enable pok
 
 format: ## Format code automatically
 	black $(BLACK_OPTS)

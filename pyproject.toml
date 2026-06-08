@@ -22,6 +22,20 @@ dependencies = [
 ]
 dynamic = ["version"]
 
+[project.optional-dependencies]
+dev = [
+  "black",
+  "build",
+  "isort",
+  "mypy",
+  "pkginfo",
+  "pylint",
+  "twine",
+]
+
+[tool.black]
+target-version = ["py311", "py312"]
+
 [project.urls]
 Issues = "https://github.com/aulasneo/tutor-contrib-pok/issues"
 Code = "https://github.com/aulasneo/tutor-contrib-pok"
