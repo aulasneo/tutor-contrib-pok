@@ -3,7 +3,7 @@ pok plugin for `Tutor <https://docs.tutor.edly.io>`__
 
 Tutor plugin to integrate POK certificates into Open edX
 
-This release targets Open edX Ulmo with Tutor 21.x.
+This release targets Open edX Verawood with Tutor 22.x.
 
 About POK
 *********
