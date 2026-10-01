@@ -1,0 +1,21 @@
+pyproject.toml
+  s_a087c6789ff8d2::t_505982e7c15fc1 9,61
+README.md
+  s_a087c6789ff8d2::t_505982e7c15fc1 1,7,9,23,25-27,29,31-33,35,38,42,46-48,50,52-56,58,87,89,93-95,99-101
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9b047e193cc7b67e4c40a9c5eb9153518b98ad47",
+  "prompts": {},
+  "sessions": {
+    "s_a087c6789ff8d2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0887c-91b3-7ef1-b5c8-8133606e45fb",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Andrés González <andres@aulasneo.com>"
+    }
+  }
+}
