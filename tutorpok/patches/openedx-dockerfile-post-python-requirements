@@ -1,2 +1,3 @@
-RUN --mount=type=cache,target=/openedx/.cache/pip,sharing=shared \
-    pip install "openedx-pok=={{ POK_PLUGIN_VERSION }}"
+#RUN --mount=type=cache,target=/openedx/.cache/pip,sharing=shared \
+#    pip install "openedx-pok=={{ POK_PLUGIN_VERSION }}"
+RUN pip install 'git+https://github.com/aulasneo/openedx-pok@verawood/v20260911#egg=openedx-pok'
