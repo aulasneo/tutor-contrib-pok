@@ -37,7 +37,7 @@ dev = [
 ]
 
 [tool.black]
-target-version = ["py311", "py312"]
+target-version = ["py310", "py311", "py312", "py313", "py314"]
 
 [project.urls]
 Issues = "https://github.com/aulasneo/tutor-contrib-pok/issues"
